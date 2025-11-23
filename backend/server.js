@@ -8,6 +8,7 @@ const authRoutes = require('./routes/auth');
 const vehicleRoutes = require('./routes/vehicles');
 const maintenanceRoutes = require('./routes/maintenance');
 const fuelRoutes = require('./routes/fuellogs');
+const parkingRoutes = require('./routes/parking');
 
 const app = express();
 app.use(cors());
@@ -20,6 +21,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/vehicles', vehicleRoutes);
 app.use('/api/maintenance', maintenanceRoutes);
 app.use('/api/fuel', fuelRoutes);
+app.use('/api/parking', parkingRoutes);
 
 app.get('/api/analytics/:vehicleId', (req, res) => {
   const data = {
